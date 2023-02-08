@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="UNCC Notes App">
+        <title>Team 29 Project Manager - View your Projects</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <header>
+            <nav>
+                <a href="{{ url_for('index') }}"> Home</a> ||
+                <a href="{{ url_for('all_projects') }}">All Projects</a> ||
+                <a href="{{ url_for('get_projects') }}"> Projects</a> ||
+                <a href="{{ url_for('all_users') }}">All Users</a> ||
+                <a href="{{ url_for('view_account') }}">Account</a> ||
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </nav>
+
+        </header>
+    </head>
+    <body>
+        <br>
+        <h1>All Users</h1>
+
+        <table>
+            <tr>
+                <th>Last Name</th>
+                <th>First Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            {% for value in users %}
+            <tr>
+                <td>{{ value.first_name }}</td>
+                <td>{{ value.last_name }}</td>
+                <td>{{ value.email }}</td>
+                <td>{{ value.phone }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </body>
+</html>

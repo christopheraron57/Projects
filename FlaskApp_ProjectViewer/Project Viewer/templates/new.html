@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="UNCC Notes App">
+        <title>UNCC Notes App - New Note</title>
+        <!-- styles -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <header>
+            <nav>
+                <a href="{{ url_for('index') }}"> Home</a> ||
+                <a href="{{ url_for('all_projects') }}">All Projects</a> ||
+                <a href="{{ url_for('get_projects') }}"> Projects</a> ||
+                <a href="{{ url_for('all_users') }}">All Users</a> ||
+                <a href="{{ url_for('view_account') }}">Account</a> ||
+                <a href="{{ url_for('logout') }}">Logout</a>
+            </nav>
+        </header>
+    </head>
+    <body>
+        <br>
+        <h1>New project </h1>
+        {% if project %}
+            <form action="{{ url_for('update_project', project_id=project.id) }}" method="post">
+        {% else %}
+            <form action="new" method="post">
+        {% endif %}
+           <p><label>Title </label></p><p>  <input type="text" name="title" value="{% if project %}{{project.title}} {% endif %}"/></p>
+           <p><label>Deadline (mm/dd/yyyy)</label></p><p>  <input type="text" name="deadline"/></p>
+            <p><label>Project </label></p>
+            <p>
+                <textarea name="projectText"  rows="6" cols="0" >
+                    {% if project %}
+                        {{project.text}}
+                    {% else %}
+                        Add your new project description here ...
+                    {% endif %}
+                </textarea>
+            </p>
+            <p>
+                {% if project %}
+                    <input type="submit" value="Update Project"/></p>
+                {% else %}
+                    <input type="submit" value="Add Project"/></p>
+                {% endif %}
+            </p>
+        </form>
+    </body>
+</html>

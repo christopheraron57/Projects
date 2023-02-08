@@ -1,0 +1,17 @@
+Sprint 2 Milestone - Requirements Document & Use Case Diagram
+
+Requirements
+
+Rationale – This would be useful for people who want to schedule their day out, perhaps a student to know when they have class and meetings with instructors. The target would be the general public for those trying to organize how their day goes.
+Description of the system – schedule-maker, picking a day and adding events that will happen that day (planned events). Program will print schedule in terminal and on a .txt file.
+Functional Requirements – The user should be able to pick a date, add events, and the program should not allow the user to put two events during the same time slot.
+Non-functional Requirements – The program should be consistent and reliable. It should be useable many times and provide a user-friendly interface. The user should understand clearly what the program is asking for. The program should be able to work multiple times. It should be maintainable, with the code being organized so that someone can add more features in the future. The more organized, the easier the code can be understood.
+
+
+Use Case Diagram:
+
+can be viewed in use_case_diagram.png 
+
+Descriptions Table:
+
+can be viewed in use_case_table.png

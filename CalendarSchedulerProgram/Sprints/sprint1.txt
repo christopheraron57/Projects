@@ -1,0 +1,9 @@
+Sprint 1 Milestone - Project Proposal
+
+Intro
+
+    For this project, I decided to create a program in which the user inputs tasks they have during the day so they can figure out how their day will look like. This will help the user use their time more efficiently and effectively make best use of their time. This program will be made in C++ as I understand it better than Java and would be simpler in writing this program.
+
+Program
+
+    Basically, the way this program is going to work is that it will ask the user what date the schedule is for. The user enters a date in (MMDDYYYY) format and the program will use that as the date. The program will then ask them what time they plan to wake up at. The user will then enter the time based on military time (7:00 AM = 0700, 5:30 PM = 1730, etc). The program asks for the first task and at what time it is at. The user enters a description, enters a value for how long it takes, and the program would ask for the time it starts at. The order will probably change for those three inputs, but that will be decided later. The program then asks if the user wants to enter another task, which the user would reply with yes or no. If yes, the user would follow the same procedure. If the user enters an event that happens during another event, the program will print an error message telling them of this, to which it will require them to enter another event. Once the user answers no to the question about if they want to enter another task, the program will then print out the schedule on the terminal. The program will then end.
